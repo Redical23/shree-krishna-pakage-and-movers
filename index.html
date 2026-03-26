@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shree Krishna Packers and Movers | Premium Relocation Services</title>
+    <meta name="description" content="Shree Krishna Packers and Movers - Trusted premium packers and movers for safe, reliable house shifting, office relocation, and vehicle transport across India. Call 8957580901, 7307463303." />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        :root {
+            --navy: #003b6d;
+            --navy-dark: #002a4f;
+            --navy-deeper: #001a33;
+            --navy-light: #0056a3;
+            --orange: #f47321;
+            --orange-dark: #d4610e;
+            --orange-light: #ff8c42;
+            --orange-glow: rgba(244, 115, 33, 0.22);
+            --bg-base: #f4f7fb;
+            --bg-white: #ffffff;
+            --bg-light: #eef3fa;
+            --text-dark: #0d1b2e;
+            --text-mid: #2d4a6b;
+            --text-muted: #5a7a9a;
+            --text-light: #8ba3be;
+            --border: rgba(0, 59, 109, 0.12);
+            --shadow-navy: rgba(0, 42, 79, 0.18);
+            --shadow-orange: rgba(244, 115, 33, 0.25);
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --radius-card: 20px;
+            --radius-btn: 50px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-base);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,h2,h3,h4,h5,h6 { font-family: 'Outfit', sans-serif; }
+        a { text-decoration: none; color: inherit; }
+
+        /* ─── NAVBAR ─── */
+        .navbar {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 0.9rem 0;
+            transition: var(--transition);
+            box-shadow: 0 2px 20px rgba(0,42,79,0.06);
+        }
+        .navbar.scrolled {
+            padding: 0.65rem 0;
+            box-shadow: 0 4px 30px rgba(0,42,79,0.12);
+        }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+        .nav-content { display: flex; align-items: center; justify-content: space-between; }
+
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo-icon {
+            width: 46px; height: 46px;
+            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
+            border-radius: 13px;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 1.5rem;
+            box-shadow: 0 4px 14px var(--shadow-orange);
+        }
+        .logo-text h2 {
+            font-size: 1.15rem; font-weight: 800;
+            color: var(--navy); line-height: 1.15; letter-spacing: -0.3px;
+        }
+        .logo-text span {
+            font-size: 0.6rem; color: var(--orange);
+            text-transform: uppercase; letter-spacing: 2.5px; font-weight: 700;
+        }
+
+        .nav-links { display: flex; align-items: center; gap: 2rem; }
+        .nav-link {
+            font-size: 0.92rem; font-weight: 600; color: var(--text-mid);
+            transition: var(--transition); position: relative; padding: 4px 0;
+        }
+        .nav-link::after {
+            content: ''; position: absolute; bottom: -2px; left: 0;
+            width: 0; height: 2.5px;
+            background: linear-gradient(90deg, var(--orange), var(--orange-light));
+            border-radius: 2px; transition: var(--transition);
+        }
+        .nav-link:hover, .nav-link.active { color: var(--orange); }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 0.72rem 1.6rem; border-radius: var(--radius-btn);
+            font-weight: 700; font-size: 0.9rem;
+            transition: var(--transition); cursor: pointer; border: none;
+            font-family: 'Inter', sans-serif; letter-spacing: 0.2px;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
+            color: white; box-shadow: 0 4px 16px var(--shadow-orange);
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px var(--shadow-orange); color: white; }
+        .btn-navy {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: white; box-shadow: 0 4px 16px var(--shadow-navy);
+        }
+        .btn-navy:hover { transform: translateY(-2px); box-shadow: 0 8px 28px var(--shadow-navy); color: white; }
+        .btn-outline {
+            background: transparent; color: var(--navy);
+            border: 2px solid var(--navy); padding: 0.66rem 1.6rem;
+        }
+        .btn-outline:hover { background: var(--navy); color: white; }
+
+        .mobile-menu-btn {
+            display: none; background: none; border: none;
+            color: var(--navy); font-size: 1.9rem; cursor: pointer;
+        }
+
+        /* ─── HERO ─── */
+        .hero {
+            position: relative; padding: 140px 0 90px;
+            min-height: 100vh; display: flex; align-items: center;
+            overflow: hidden;
+        }
+        .hero-bg-shape {
+            position: absolute; top: -100px; right: -200px;
+            width: 700px; height: 700px;
+            background: radial-gradient(circle, rgba(244,115,33,0.08) 0%, transparent 65%);
+            pointer-events: none; z-index: 0;
+        }
+        .hero-bg-shape-2 {
+            position: absolute; bottom: -150px; left: -100px;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(0,59,109,0.07) 0%, transparent 65%);
+            pointer-events: none; z-index: 0;
+        }
+        .hero-grid {
+            display: grid; grid-template-columns: 1.15fr 0.85fr;
+            gap: 4rem; align-items: center; position: relative; z-index: 1;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 7px 16px;
+            background: rgba(244,115,33,0.1); border: 1.5px solid rgba(244,115,33,0.3);
+            border-radius: 50px; font-size: 0.82rem; color: var(--orange);
+            margin-bottom: 1.75rem; font-weight: 700; letter-spacing: 0.3px;
+            animation: badgeFloat 3s ease-in-out infinite alternate;
+        }
+        .hero h1 {
+            font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+            line-height: 1.08; font-weight: 900;
+            margin-bottom: 1.4rem; letter-spacing: -1.5px;
+            color: var(--navy-dark);
+            text-wrap: balance;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .navy-text { color: var(--navy); }
+        .hero p {
+            font-size: 1.1rem; color: var(--text-muted);
+            margin-bottom: 2.25rem; max-width: 88%; line-height: 1.82;
+        }
+        .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+        .hero-phone {
+            display: inline-flex; align-items: center; gap: 8px;
+            font-weight: 700; font-size: 1rem; color: var(--navy);
+            padding: 0.72rem 1.4rem;
+            border: 2px solid rgba(0,59,109,0.2); border-radius: 50px;
+            transition: var(--transition); background: white;
+            box-shadow: 0 4px 16px var(--shadow-navy);
+        }
+        .hero-phone:hover { border-color: var(--orange); color: var(--orange); transform: translateY(-2px); }
+        .hero-phone i { color: var(--orange); font-size: 1.1rem; }
+
+        .hero-visual { position: relative; }
+        .hero-image-wrap {
+            position: relative; border-radius: 26px; overflow: hidden;
+            border: 2px solid var(--border);
+            transform: perspective(1000px) rotateY(-8deg) rotateX(4deg);
+            box-shadow: -15px 20px 60px var(--shadow-navy), 0 0 50px var(--shadow-orange);
+            transition: var(--transition);
+        }
+        .hero-image-wrap:hover { transform: perspective(1000px) rotateY(-3deg) rotateX(1deg); }
+        .hero-image-wrap img { width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 4/5; }
+
+        .floating-card {
+            position: absolute; background: white;
+            border: 1.5px solid var(--border); padding: 1rem 1.25rem;
+            border-radius: 16px; display: flex; align-items: center; gap: 12px;
+            box-shadow: 0 10px 35px var(--shadow-navy); z-index: 2;
+        }
+        .fc-1 { bottom: -15px; left: -45px; animation: float 6s ease-in-out infinite; }
+        .fc-2 { top: 35px; right: -35px; animation: float 5s ease-in-out infinite reverse; }
+        .fc-icon {
+            width: 40px; height: 40px;
+            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
+            color: white; border-radius: 11px;
+            display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .fc-label { font-weight: 800; font-size: 0.95rem; color: var(--navy-dark); line-height: 1.2; }
+        .fc-sub { font-size: 0.75rem; color: var(--text-muted); }
+
+        @keyframes badgeFloat { 0% { transform: translateY(0); } 100% { transform: translateY(-5px); } }
+        @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+
+        /* ─── STATS BAND ─── */
+        .stats-band {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+            padding: 3.5rem 0;
+            position: relative; overflow: hidden;
+        }
+        .stats-band::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 70% 50%, rgba(244,115,33,0.15) 0%, transparent 55%);
+            pointer-events: none;
+        }
+        .stats-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr);
+            gap: 2rem; text-align: center; position: relative; z-index: 1;
+        }
+        .stat-item { padding: 1rem; }
+        .stat-number {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.8rem; font-weight: 800; color: white;
+            line-height: 1; margin-bottom: 0.5rem;
+        }
+        .stat-number span { color: var(--orange-light); }
+        .stat-label {
+            font-size: 0.82rem; color: rgba(255,255,255,0.65);
+            text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;
+        }
+        .stat-divider {
+            border-left: 1px solid rgba(255,255,255,0.12);
+        }
+
+        /* ─── SECTIONS ─── */
+        .section-label {
+            display: inline-flex; align-items: center; gap: 8px;
+            font-size: 0.78rem; font-weight: 800; color: var(--orange);
+            text-transform: uppercase; letter-spacing: 3px;
+            margin-bottom: 0.9rem; padding: 5px 14px;
+            background: rgba(244,115,33,0.1); border-radius: 50px;
+            border: 1px solid rgba(244,115,33,0.2);
+        }
+        .section-header { text-align: center; margin-bottom: 3.5rem; }
+        .section-header h2 {
+            font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+            font-weight: 800; color: var(--navy-dark); letter-spacing: -0.8px;
+            text-wrap: balance; line-height: 1.15;
+        }
+        .section-header p {
+            color: var(--text-muted); font-size: 1.05rem;
+            max-width: 580px; margin: 1rem auto 0; line-height: 1.8;
+        }
+
+        /* ─── SERVICES ─── */
+        .services { padding: 7rem 0; background: var(--bg-white); }
+        .services-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem;
+        }
+        .service-card {
+            background: var(--navy);
+            color: white; border-radius: var(--radius-card);
+            padding: 2.25rem; transition: var(--transition);
+            position: relative; overflow: hidden; z-index: 1;
+            box-shadow: 0 8px 30px var(--shadow-navy);
+        }
+        .service-card::before {
+            content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+            background: radial-gradient(circle at top right, rgba(244,115,33,0.18) 0%, transparent 55%);
+            opacity: 0; transition: var(--transition); z-index: -1;
+        }
+        .service-card:hover { transform: translateY(-6px); box-shadow: 0 18px 50px var(--shadow-navy); }
+        .service-card:hover::before { opacity: 1; }
+        .svc-num {
+            font-family: 'Outfit', sans-serif; font-size: 3.5rem; font-weight: 900;
+            color: rgba(255,255,255,0.07); line-height: 1;
+            position: absolute; bottom: 1.5rem; right: 1.75rem; letter-spacing: -2px;
+        }
+        .svc-icon {
+            width: 58px; height: 58px; border-radius: 14px;
+            background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.15);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.7rem; color: var(--orange-light);
+            margin-bottom: 1.4rem; transition: var(--transition);
+        }
+        .service-card:hover .svc-icon {
+            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
+            color: white; border-color: transparent;
+            transform: scale(1.1) rotate(5deg);
+        }
+        .service-card h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.75rem; color: white; }
+        .service-card p { color: rgba(255,255,255,0.7); font-size: 0.92rem; line-height: 1.75; }
+
+        /* ─── WHY US ─── */
+        .why-us { padding: 7rem 0; background: var(--bg-base); }
+        .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .why-image-stack { position: relative; }
+        .why-img-main {
+            border-radius: 24px; overflow: hidden;
+            box-shadow: 0 15px 50px var(--shadow-navy);
+            border: 2px solid var(--border);
+        }
+        .why-img-main img { width: 100%; display: block; object-fit: cover; height: 420px; }
+        .why-img-badge {
+            position: absolute; bottom: -20px; right: -20px;
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            color: white; border-radius: 20px; padding: 1.5rem;
+            text-align: center; box-shadow: 0 12px 30px var(--shadow-orange);
+            min-width: 130px;
+        }
+        .why-img-badge .num {
+            font-family: 'Outfit', sans-serif; font-size: 2.4rem; font-weight: 900; line-height: 1;
+        }
+        .why-img-badge .lbl { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; opacity: 0.9; }
+        .why-features { list-style: none; margin-top: 2rem; }
+        .why-feature {
+            display: flex; align-items: flex-start; gap: 1rem;
+            padding: 1.1rem; background: white; border-radius: 14px;
+            border: 1.5px solid var(--border); margin-bottom: 1rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(0,42,79,0.05);
+        }
+        .why-feature:hover { border-color: rgba(244,115,33,0.4); transform: translateX(6px); }
+        .why-feature-icon {
+            width: 46px; height: 46px; border-radius: 12px; flex-shrink: 0;
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.3rem; color: white;
+        }
+        .why-feature-text h4 { font-size: 1rem; font-weight: 700; color: var(--navy-dark); margin-bottom: 0.25rem; }
+        .why-feature-text p { font-size: 0.87rem; color: var(--text-muted); line-height: 1.6; }
+
+        /* ─── PROCESS ─── */
+        .process { padding: 7rem 0; background: var(--navy); overflow: hidden; position: relative; }
+        .process::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 30% 60%, rgba(244,115,33,0.12) 0%, transparent 55%);
+            pointer-events: none;
+        }
+        .process .section-header h2 { color: white; }
+        .process .section-header p { color: rgba(255,255,255,0.6); }
+        .process .section-label { background: rgba(244,115,33,0.2); border-color: rgba(244,115,33,0.4); }
+        .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; position: relative; }
+        .process-grid::before {
+            content: ''; position: absolute; top: 35px; left: 15%; right: 15%; height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(244,115,33,0.5), transparent);
+            z-index: 0;
+        }
+        .process-step { text-align: center; position: relative; z-index: 1; }
+        .step-circle {
+            width: 72px; height: 72px; border-radius: 50%;
+            background: rgba(255,255,255,0.06); border: 2px solid rgba(244,115,33,0.5);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.7rem; color: var(--orange-light);
+            margin: 0 auto 1.25rem; transition: var(--transition);
+        }
+        .process-step:hover .step-circle {
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            color: white; border-color: transparent;
+            transform: scale(1.1);
+        }
+        .step-num {
+            display: block; font-family: 'Outfit', sans-serif; font-size: 0.7rem;
+            font-weight: 800; color: var(--orange); letter-spacing: 2px;
+            text-transform: uppercase; margin-bottom: 0.5rem;
+        }
+        .process-step h3 { font-size: 1.1rem; font-weight: 700; color: white; margin-bottom: 0.5rem; }
+        .process-step p { font-size: 0.87rem; color: rgba(255,255,255,0.55); line-height: 1.7; }
+
+        /* ─── TESTIMONIALS ─── */
+        .testimonials { padding: 7rem 0; background: var(--bg-white); }
+        .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
+        .testi-card {
+            background: var(--navy); color: white;
+            border-radius: var(--radius-card); padding: 2.25rem;
+            position: relative; overflow: hidden;
+            box-shadow: 0 8px 30px var(--shadow-navy); transition: var(--transition);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .testi-card:hover { transform: translateY(-5px); box-shadow: 0 16px 50px var(--shadow-navy); }
+        .testi-stars { color: var(--orange-light); font-size: 0.9rem; margin-bottom: 1rem; letter-spacing: 2px; }
+        .testi-card p {
+            color: rgba(255,255,255,0.75); font-size: 0.96rem;
+            line-height: 1.82; margin-bottom: 1.75rem; font-style: italic;
+        }
+        .testi-quote-mark {
+            position: absolute; top: 1.5rem; right: 1.75rem;
+            font-size: 5rem; font-family: Georgia, serif; color: rgba(244,115,33,0.15);
+            line-height: 1; pointer-events: none;
+        }
+        .client-info { display: flex; align-items: center; gap: 1rem; }
+        .client-avatar {
+            width: 46px; height: 46px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 800; color: white; font-size: 0.95rem; font-family: 'Outfit', sans-serif;
+            flex-shrink: 0;
+        }
+        .client-details h4 { font-size: 0.95rem; font-weight: 700; color: white; margin-bottom: 0.2rem; }
+        .client-details span { font-size: 0.78rem; color: var(--orange-light); font-weight: 600; }
+
+        /* ─── FAQ ─── */
+        .faq { padding: 7rem 0; background: var(--bg-base); }
+        .faq-wrap { max-width: 820px; margin: 0 auto; }
+        .faq-item {
+            background: white; border: 1.5px solid var(--border);
+            border-radius: 14px; margin-bottom: 1rem; overflow: hidden;
+            box-shadow: 0 4px 14px rgba(0,42,79,0.05); transition: var(--transition);
+        }
+        .faq-item.open { border-color: rgba(244,115,33,0.4); box-shadow: 0 6px 20px var(--shadow-orange); }
+        .faq-q {
+            padding: 1.35rem 1.5rem; display: flex; justify-content: space-between; align-items: center;
+            cursor: pointer; font-family: 'Outfit', sans-serif; font-weight: 700;
+            font-size: 1.05rem; color: var(--navy-dark); transition: var(--transition);
+        }
+        .faq-q:hover { color: var(--orange); }
+        .faq-q i { transition: transform 0.35s; color: var(--orange); font-size: 1.2rem; flex-shrink: 0; }
+        .faq-item.open .faq-q i { transform: rotate(45deg); }
+        .faq-item.open .faq-q { color: var(--orange); }
+        .faq-a {
+            padding: 0 1.5rem; max-height: 0; overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.16,1,0.3,1), padding 0.3s ease;
+            color: var(--text-muted); font-size: 0.95rem; line-height: 1.78;
+        }
+        .faq-item.open .faq-a { padding: 0 1.5rem 1.5rem; max-height: 300px; }
+
+        /* ─── CTA ─── */
+        .cta-section { padding: 6rem 0; background: var(--bg-white); }
+        .cta-box {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 60%, #001228 100%);
+            border-radius: 28px; padding: 5rem 3rem; text-align: center;
+            position: relative; overflow: hidden;
+            box-shadow: 0 20px 60px var(--shadow-navy);
+        }
+        .cta-box::before {
+            content: ''; position: absolute; top: -30%; right: -10%;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(244,115,33,0.18) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .cta-box::after {
+            content: ''; position: absolute; bottom: -30%; left: -10%;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(244,115,33,0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .cta-box h2 {
+            font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 800;
+            color: white; margin-bottom: 1.25rem; position: relative; z-index: 1;
+            letter-spacing: -0.8px;
+        }
+        .cta-box p {
+            color: rgba(255,255,255,0.65); font-size: 1.05rem;
+            max-width: 560px; margin: 0 auto 2.5rem;
+            position: relative; z-index: 1; line-height: 1.8;
+        }
+        .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+        .cta-phone {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: rgba(255,255,255,0.1); color: white;
+            border: 1.5px solid rgba(255,255,255,0.25); border-radius: 50px;
+            padding: 0.85rem 1.8rem; font-weight: 700; font-size: 1rem;
+            transition: var(--transition);
+        }
+        .cta-phone:hover { background: rgba(255,255,255,0.18); transform: translateY(-2px); color: white; }
+        .cta-phone i { color: var(--orange-light); }
+
+        /* ─── FOOTER ─── */
+        footer { background: var(--navy-deeper); color: white; padding: 4.5rem 0 2rem; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1.6fr; gap: 3.5rem; margin-bottom: 3.5rem; }
+        .footer-brand p { color: rgba(255,255,255,0.55); font-size: 0.92rem; line-height: 1.75; margin: 1.25rem 0 1rem; }
+        .footer-gst { font-family: 'Courier New', monospace; font-size: 0.8rem; color: rgba(255,255,255,0.35); }
+        .footer-gst span { color: var(--orange-light); }
+        .social-links { display: flex; gap: 10px; margin-top: 1.25rem; }
+        .social-link {
+            width: 36px; height: 36px; border-radius: 10px;
+            background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1rem; color: rgba(255,255,255,0.6);
+            transition: var(--transition);
+        }
+        .social-link:hover { background: var(--orange); color: white; border-color: var(--orange); transform: translateY(-3px); }
+        .footer-heading { color: white; font-size: 0.95rem; font-weight: 700; margin-bottom: 1.4rem; letter-spacing: 0.5px; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 0.65rem; }
+        .footer-links a { color: rgba(255,255,255,0.5); font-size: 0.9rem; transition: var(--transition); }
+        .footer-links a:hover { color: var(--orange-light); padding-left: 5px; }
+        .contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0.9rem; }
+        .contact-item i { color: var(--orange); font-size: 1.1rem; margin-top: 2px; flex-shrink: 0; }
+        .contact-item a, .contact-item span { color: rgba(255,255,255,0.55); font-size: 0.88rem; line-height: 1.65; transition: var(--transition); }
+        .contact-item a:hover { color: var(--orange-light); }
+        .footer-bottom {
+            padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08);
+            text-align: center; color: rgba(255,255,255,0.3); font-size: 0.82rem;
+        }
+
+        /* ─── WHATSAPP FLOAT ─── */
+        .wa-btn {
+            position: fixed; bottom: 28px; right: 28px; z-index: 999;
+            background: #25D366; color: white; padding: 1rem 1.6rem;
+            border-radius: 50px; display: flex; align-items: center; gap: 10px;
+            font-weight: 700; font-size: 0.95rem;
+            box-shadow: 0 6px 24px rgba(37,211,102,0.45); transition: var(--transition);
+            animation: waPulse 3s ease-in-out infinite;
+        }
+        .wa-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 35px rgba(37,211,102,0.6); color: white; }
+        .wa-btn i { font-size: 1.3rem; }
+        @keyframes waPulse {
+            0%,100% { box-shadow: 0 6px 24px rgba(37,211,102,0.45); }
+            50% { box-shadow: 0 6px 35px rgba(37,211,102,0.7), 0 0 0 10px rgba(37,211,102,0.12); }
+        }
+
+        /* ─── SCROLL REVEAL ─── */
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 1024px) {
+            .hero-grid, .why-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero-actions { justify-content: center; }
+            .hero p { max-width: 100%; }
+            .hero-image-wrap { transform: none !important; max-width: 540px; margin: 0 auto; }
+            .fc-1, .fc-2 { display: none; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .process-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+            .why-image-stack { max-width: 480px; margin: 0 auto; }
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed; top: 68px; left: 0; right: 0;
+                background: white; flex-direction: column; padding: 1.75rem;
+                border-bottom: 1px solid var(--border);
+                box-shadow: 0 10px 30px var(--shadow-navy);
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); transition: var(--transition);
+            }
+            .nav-links.show { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+            .mobile-menu-btn { display: block; }
+            .hero h1 { font-size: 2.4rem; }
+            .testi-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .cta-box { padding: 3rem 1.5rem; }
+            .process-grid { grid-template-columns: 1fr 1fr; }
+            .stat-divider { border-left: none; }
+        }
+        @media (max-width: 480px) {
+            .process-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .services-grid { grid-template-columns: 1fr; }
+            .faq-q { padding: 1rem 1.2rem; font-size: 0.95rem; }
+            .faq-a { padding: 0 1.2rem; }
+            .faq-item.open .faq-a { padding: 0 1.2rem 1.2rem; }
+            .wa-btn span { display: none; }
+            .wa-btn { border-radius: 50%; padding: 1rem; }
+            .wa-btn i { font-size: 1.75rem; margin: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/918957580901" class="wa-btn" aria-label="Chat on WhatsApp">
+        <i class="ph-fill ph-whatsapp-logo"></i>
+        <span>+91 89575 80901</span>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="ph-bold ph-truck"></i></div>
+                <div class="logo-text">
+                    <h2>Shree Krishna</h2>
+                    <span>Packers &amp; Movers</span>
+                </div>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="tel:+918957580901" class="btn btn-primary">
+                    <i class="ph-bold ph-phone-call"></i> Get Free Quote
+                </a>
+            </div>
+            <button class="mobile-menu-btn" id="menuBtn"><i class="ph-bold ph-list"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg-shape"></div>
+        <div class="hero-bg-shape-2"></div>
+        <div class="container hero-grid">
+            <div class="hero-content reveal">
+                <div class="hero-badge">
+                    <i class="ph-fill ph-shield-check"></i> Specialist In: Army Air Force Military Force &amp; House Hold
+                </div>
+                <h1>Moving Your World,<br><span class="gradient-text">Safely &amp; Swiftly.</span></h1>
+                <p>Experience stress-free relocation across India with our premium packing &amp; moving services. Full insurance, GPS tracking, and on-time delivery — guaranteed.</p>
+                <div class="hero-actions">
+                    <a href="tel:+918957580901" class="btn btn-primary" style="padding:0.85rem 2rem; font-size:1rem;">
+                        <i class="ph-bold ph-calendar-check"></i> Book Now
+                    </a>
+                    <a href="tel:+918957580901" class="hero-phone">
+                        <i class="ph-bold ph-phone"></i> +91 89575 80901
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual reveal">
+                <div class="hero-image-wrap">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=80" alt="Professional Movers at Work" loading="lazy">
+                </div>
+                <div class="floating-card fc-1">
+                    <div class="fc-icon"><i class="ph-bold ph-package"></i></div>
+                    <div><div class="fc-label">100% Safe</div><div class="fc-sub">Premium Packing</div></div>
+                </div>
+                <div class="floating-card fc-2">
+                    <div class="fc-icon"><i class="ph-bold ph-map-pin"></i></div>
+                    <div><div class="fc-label">Pan India</div><div class="fc-sub">Delivery Network</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Band -->
+    <section class="stats-band reveal">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">10<span>+</span></div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item stat-divider">
+                <div class="stat-number">5K<span>+</span></div>
+                <div class="stat-label">Happy Families</div>
+            </div>
+            <div class="stat-item stat-divider">
+                <div class="stat-number">100<span>+</span></div>
+                <div class="stat-label">Cities Covered</div>
+            </div>
+            <div class="stat-item stat-divider">
+                <div class="stat-number">24<span>/7</span></div>
+                <div class="stat-label">Customer Support</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label"><i class="ph-bold ph-star"></i> Our Expertise</div>
+                <h2>Comprehensive <span class="gradient-text">Relocation Services</span></h2>
+                <p>From a single sofa to an entire office, we handle every move with precision, care, and professionalism.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="svc-icon"><i class="ph-bold ph-box-arrow-down"></i></div>
+                    <div class="svc-num">01</div>
+                    <h3>Premium Packing</h3>
+                    <p>Multi-layer protective packaging using bubble wraps, corrugated sheets, and stretch wraps for zero-damage transit of your valuables.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="svc-icon"><i class="ph-bold ph-house-line"></i></div>
+                    <div class="svc-num">02</div>
+                    <h3>House Shifting</h3>
+                    <p>End-to-end household relocation — careful disassembly, secure transport, and complete reassembly at your new home.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="svc-icon"><i class="ph-bold ph-buildings"></i></div>
+                    <div class="svc-num">03</div>
+                    <h3>Corporate Relocation</h3>
+                    <p>Minimal downtime office moves executed with synchronization and precision, keeping your business running smoothly.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="svc-icon"><i class="ph-bold ph-car-profile"></i></div>
+                    <div class="svc-num">04</div>
+                    <h3>Vehicle Transport</h3>
+                    <p>Safe car and bike transportation using enclosed carrier trucks, preventing any scratches or damage during transit.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="svc-icon"><i class="ph-bold ph-shield-check"></i></div>
+                    <div class="svc-num">05</div>
+                    <h3>Full Insurance Cover</h3>
+                    <p>Comprehensive transit insurance on all shipments so you stay completely stress-free about the safety of your belongings.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="svc-icon"><i class="ph-bold ph-clock-countdown"></i></div>
+                    <div class="svc-num">06</div>
+                    <h3>Express Delivery</h3>
+                    <p>Our advanced logistics network ensures your belongings reach you exactly when promised — no delays, no excuses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="why-us">
+        <div class="container why-grid">
+            <div class="why-image-stack reveal">
+                <div class="why-img-main">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80" alt="Our Warehouse Operations" loading="lazy">
+                </div>
+                <div class="why-img-badge">
+                    <div class="num">10+</div>
+                    <div class="lbl">YEARS OF TRUST</div>
+                </div>
+            </div>
+            <div class="why-content reveal">
+                <div class="section-label"><i class="ph-bold ph-trophy"></i> Why Choose Us</div>
+                <h2 style="font-size:clamp(1.8rem,3vw,2.6rem); font-weight:800; color:var(--navy-dark); letter-spacing:-0.8px; margin-bottom:1rem; line-height:1.15;">The Shree Krishna <span class="gradient-text">Difference</span></h2>
+                <p style="color:var(--text-muted); margin-bottom:1.75rem; line-height:1.8;">We don't just move boxes — we move lives. Every member of our team is trained, background-verified, and committed to treating your belongings as their own.</p>
+                <ul class="why-features">
+                    <li class="why-feature">
+                        <div class="why-feature-icon"><i class="ph-bold ph-map-trifold"></i></div>
+                        <div class="why-feature-text">
+                            <h4>Live GPS Tracking</h4>
+                            <p>Track your shipment in real-time via our app — full transparency throughout the journey.</p>
+                        </div>
+                    </li>
+                    <li class="why-feature">
+                        <div class="why-feature-icon"><i class="ph-bold ph-currency-inr"></i></div>
+                        <div class="why-feature-text">
+                            <h4>100% Transparent Pricing</h4>
+                            <p>No hidden charges. Your final quote after survey is exactly what you pay — inclusive of taxes and tolls.</p>
+                        </div>
+                    </li>
+                    <li class="why-feature">
+                        <div class="why-feature-icon"><i class="ph-bold ph-user-check"></i></div>
+                        <div class="why-feature-text">
+                            <h4>Trained & Verified Staff</h4>
+                            <p>All 200+ team members are background-checked, trained in premium packing techniques.</p>
+                        </div>
+                    </li>
+                    <li class="why-feature">
+                        <div class="why-feature-icon"><i class="ph-bold ph-headset"></i></div>
+                        <div class="why-feature-text">
+                            <h4>24/7 Customer Support</h4>
+                            <p>Our dedicated support team is always available — call, WhatsApp, or email any time.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label"><i class="ph-bold ph-lightning"></i> How It Works</div>
+                <h2>Your Move in <span class="gradient-text">4 Easy Steps</span></h2>
+                <p>Simple, transparent, and stress-free — from your first call to final delivery.</p>
+            </div>
+            <div class="process-grid reveal">
+                <div class="process-step">
+                    <div class="step-circle"><i class="ph-bold ph-phone-call"></i></div>
+                    <span class="step-num">Step 01</span>
+                    <h3>Free Consultation</h3>
+                    <p>Call us or request a callback. We understand your exact requirements and schedule a survey.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-circle"><i class="ph-bold ph-clipboard-text"></i></div>
+                    <span class="step-num">Step 02</span>
+                    <h3>Get Your Quote</h3>
+                    <p>Receive a transparent, all-inclusive quote after our pre-move survey. No surprises.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-circle"><i class="ph-bold ph-package"></i></div>
+                    <span class="step-num">Step 03</span>
+                    <h3>Pack &amp; Load</h3>
+                    <p>Our expert team professionally packs, labels, and loads all your items with care.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-circle"><i class="ph-bold ph-house-line"></i></div>
+                    <span class="step-num">Step 04</span>
+                    <h3>Deliver &amp; Settle</h3>
+                    <p>Safe delivery and setup at your new location. We unpack and place furniture too.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label"><i class="ph-bold ph-heart"></i> Client Love</div>
+                <h2>What Our Customers <span class="gradient-text">Say</span></h2>
+                <p>Join thousands of happy families and businesses who trusted us with their most important move.</p>
+            </div>
+            <div class="testi-grid">
+                <div class="testi-card reveal">
+                    <div class="testi-quote-mark">"</div>
+                    <div class="testi-stars">★★★★★</div>
+                    <p>"Moving from Delhi to Bangalore was a breeze with Shree Krishna. Their packing quality is outstanding — my glassware arrived without a single scratch. Truly professional!"</p>
+                    <div class="client-info">
+                        <div class="client-avatar">RK</div>
+                        <div class="client-details"><h4>Rahul Khanna</h4><span>IT Professional, Delhi</span></div>
+                    </div>
+                </div>
+                <div class="testi-card reveal">
+                    <div class="testi-quote-mark">"</div>
+                    <div class="testi-stars">★★★★★</div>
+                    <p>"They moved our entire 50-employee office over the weekend. We were operational on Monday morning without any issues. Highly professional and reliable team!"</p>
+                    <div class="client-info">
+                        <div class="client-avatar">SM</div>
+                        <div class="client-details"><h4>Sneha Malhotra</h4><span>Operations Manager, Mumbai</span></div>
+                    </div>
+                </div>
+                <div class="testi-card reveal">
+                    <div class="testi-quote-mark">"</div>
+                    <div class="testi-stars">★★★★★</div>
+                    <p>"Transported my Royal Enfield and sedan safely. The enclosed carriers they use are top-tier. Vehicle arrived spotless. Highly recommended for vehicle transport!"</p>
+                    <div class="client-info">
+                        <div class="client-avatar">AD</div>
+                        <div class="client-details"><h4>Arun Desai</h4><span>Business Owner, Pune</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label"><i class="ph-bold ph-question"></i> Got Questions?</div>
+                <h2>Frequently Asked <span class="gradient-text">Questions</span></h2>
+            </div>
+            <div class="faq-wrap">
+                <div class="faq-item reveal">
+                    <div class="faq-q">How much time does packing take for a 2BHK? <i class="ph-bold ph-plus"></i></div>
+                    <div class="faq-a">For a standard 2BHK, a team of 4 professionals typically takes 4–6 hours to dismantle, pack, and inventory all items before loading.</div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-q">Do you provide transit insurance? <i class="ph-bold ph-plus"></i></div>
+                    <div class="faq-a">Yes! We provide comprehensive transit insurance on all shipments. In the rare case of damage, you are fully covered based on the declared value of goods.</div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-q">Are there any hidden charges? <i class="ph-bold ph-plus"></i></div>
+                    <div class="faq-a">Absolutely not. We pride ourselves on 100% transparent pricing. The quote after our pre-move survey is final — inclusive of all taxes, tolls, and packing materials.</div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-q">Do you unpack and assemble furniture at the destination? <i class="ph-bold ph-plus"></i></div>
+                    <div class="faq-a">Yes, our door-to-door service includes unpacking heavy furniture and placing items as per your instruction, along with disposal of packing debris.</div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-q">How can I track my shipment? <i class="ph-bold ph-plus"></i></div>
+                    <div class="faq-a">We provide real-time GPS tracking for all inter-city moves. You'll receive a tracking link once your shipment is dispatched. Our support team is also available 24/7 for updates.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container reveal">
+            <div class="cta-box">
+                <h2>Ready for a <span class="gradient-text">Smooth Move?</span></h2>
+                <p>Join thousands of satisfied families and businesses. Let us handle the heavy lifting while you focus on your new beginning.</p>
+                <div class="cta-actions">
+                    <a href="tel:+918957580901" class="btn btn-primary" style="padding:0.9rem 2.2rem; font-size:1.05rem;">
+                        <i class="ph-bold ph-phone-call"></i> Call: +91 89575 80901
+                    </a>
+                    <a href="tel:+917307463303" class="btn btn-primary" style="padding:0.9rem 2.2rem; font-size:1.05rem;">
+                        <i class="ph-bold ph-phone-call"></i> Call: +91 73074 63303
+                    </a>
+                    <a href="https://wa.me/918957580901" class="cta-phone">
+                        <i class="ph-fill ph-whatsapp-logo"></i> WhatsApp Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon" style="width:38px;height:38px;font-size:1.2rem;"><i class="ph-bold ph-truck"></i></div>
+                        <div class="logo-text">
+                            <h2 style="color:white;font-size:1.05rem;">Shree Krishna</h2>
+                            <span style="color:var(--orange-light);">Packers &amp; Movers</span>
+                        </div>
+                    </div>
+                    <p>Daily Service: U.P. Maharashtra, Bihar Bengal, Gujrat, Rajasthan, Karnatka Orisa, Punjab &amp; All Over India.<br>Specialist In: Army Air Force Military Force &amp; House Hold.</p>
+                    <div class="footer-gst">GSTIN.- <span>09FFWPK192751ZP</span></div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="ph-bold ph-facebook-logo"></i></a>
+                        <a href="https://wa.me/918957580901" class="social-link"><i class="ph-bold ph-whatsapp-logo"></i></a>
+                        <a href="#" class="social-link"><i class="ph-bold ph-instagram-logo"></i></a>
+                        <a href="#" class="social-link"><i class="ph-bold ph-youtube-logo"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <div class="contact-item">
+                        <i class="ph-bold ph-phone"></i>
+                        <div>
+                            <a href="tel:+918957580901">+91 89575 80901</a>, <a href="tel:+917307463303">+91 73074 63303</a><br>
+                            <span>24/7 Support</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="ph-fill ph-whatsapp-logo"></i>
+                        <div><a href="https://wa.me/918957580901">+91 89575 80901</a><br><span>WhatsApp Chat</span></div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="ph-bold ph-envelope-simple"></i>
+                        <a href="mailto:info@shreekrishnapackers.com">info@shreekrishnapackers.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="ph-bold ph-map-pin"></i>
+                        <span><strong>HEAD OFFICE:</strong> 39D/1, MUNDERA, PRAYAGRAJ<br><strong>BRANCH OFFICE:</strong> 243, TRANSPORT NAGAR, PRAYAGRAJ</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Shree Krishna Packers and Movers. All rights reserved. | Made with ❤️ in India
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.getElementById('navLinks');
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('ph-list');
+            icon.classList.toggle('ph-x');
+        });
+
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.querySelector('.faq-q').addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                faqItems.forEach(i => i.classList.remove('open'));
+                if (!isOpen) item.classList.add('open');
+            });
+        });
+
+        const revealObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: '0px 0px -40px 0px', threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
